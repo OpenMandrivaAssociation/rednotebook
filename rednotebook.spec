@@ -1,18 +1,22 @@
 Name:           rednotebook
-Version:        1.8.0
-Release:        2
+Version:        2.17
+Release:        1
 Summary:        A desktop diary
 Group:          Office
 License:        GPLv2+
 URL:            http://rednotebook.sourceforge.net
-Source0:        http://sourceforge.net/projects/rednotebook/files/%{name}-%{version}.tar.gz
+Source0:        https://github.com/jendrikseipp/rednotebook/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  python-devel
-Requires:       python-yaml
-Requires:       pygtk2.0
-Requires:       python-webkitgtk
-Requires:       gnome-python-extras
-Requires:	python-chardet
+BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(pygobject-3.0)
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	desktop-file-utils
+
+Requires:	python3dist(pyyaml)
+Requires:	python3dist(pygobject)
+Requires:	python3dist(chardet)
+Recommends:	python3dist(pyenchant)
+Recommends:	python3dist(pygtkspellcheck)
 
 %description
 RedNotebook is a desktop diary that makes it very easy for you
@@ -24,30 +28,24 @@ and does so in style.
 %setup -q
 
 %build
-python setup.py build
+%py_build
 
 %install
-python setup.py install --skip-build --root %{buildroot}
-desktop-file-install                                    \
-    --add-category="Calendar"                           \
-    --delete-original                                   \
-    --dir=%{buildroot}%{_datadir}/applications          \
-    %{buildroot}/%{_datadir}/applications/%{name}.desktop
+%py_install
+
+desktop-file-install \
+	--add-category="Calendar" \
+	--dir=%{buildroot}%{_datadir}/applications \
+	%{buildroot}/%{_datadir}/applications/%{name}.desktop
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS CHANGELOG LICENSE README
+%doc CHANGELOG.md README.md
+%license LICENSE
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/scalable/apps/*.svg
-# % {_datadir}/locale/*/
-%dir %{py_puresitedir}/%{name}/
-%{py_puresitedir}/%{name}/*.py*
-%{py_puresitedir}/%{name}/external/
-%{py_puresitedir}/%{name}/files/
-%{py_puresitedir}/%{name}/gui/
-%{py_puresitedir}/%{name}/images/
-%{py_puresitedir}/%{name}/util/
-%{py_puresitedir}/%{name}*.egg-info
-
+%{_datadir}/metainfo/%{name}.appdata.xml
+%{_iconsdir}/hicolor/scalable/apps/%{name}.svg
+%{python_sitelib}/%{name}/
+%{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
