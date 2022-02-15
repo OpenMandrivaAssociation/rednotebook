@@ -45,7 +45,7 @@ desktop-file-install \
 %license LICENSE
 %{_bindir}/%{name}
 %{_datadir}/applications/app.rednotebook.rednotebook.desktop
-%{_datadir}/metainfo/%{name}.appdata.xml
+%{_datadir}/metainfo/app.rednotebook.rednotebook.appdata.xml
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
 %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
