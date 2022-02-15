@@ -36,7 +36,7 @@ and does so in style.
 desktop-file-install \
 	--add-category="Calendar" \
 	--dir=%{buildroot}%{_datadir}/applications \
-	%{buildroot}/%{_datadir}/applications/%{name}.desktop
+	%{buildroot}/%{_datadir}/applications/app.rednotebook.rednotebook.desktop
 
 %find_lang %{name}
 
@@ -44,7 +44,7 @@ desktop-file-install \
 %doc CHANGELOG.md README.md
 %license LICENSE
 %{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/app.rednotebook.rednotebook.desktop
 %{_datadir}/metainfo/%{name}.appdata.xml
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
 %{python_sitelib}/%{name}/
