@@ -25,7 +25,7 @@ journal software helps you to write whole passages or just facts,
 and does so in style.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %py_build
@@ -45,7 +45,7 @@ desktop-file-install \
 %license LICENSE
 %{_bindir}/%{name}
 %{_datadir}/applications/rednotebook.desktop
-%{_datadir}/metainfo/app.rednotebook.rednotebook.appdata.xml
+%{_datadir}/metainfo/rednotebook.appdata.xml
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
 %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
