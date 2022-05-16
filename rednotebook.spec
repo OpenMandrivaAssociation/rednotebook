@@ -1,6 +1,6 @@
 Name:           rednotebook
-Version:        2.24
-Release:        2
+Version:        2.25
+Release:        1
 Summary:        A desktop diary
 Group:          Office
 License:        GPLv2+
