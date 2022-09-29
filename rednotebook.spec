@@ -49,4 +49,4 @@ desktop-file-install \
 %{_datadir}/metainfo/rednotebook.appdata.xml
 %{_iconsdir}/hicolor/scalable/apps/%{name}.svg
 %{python_sitelib}/%{name}/
-#{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info
+%{python_sitelib}/%{name}-%{version}.dist-info
