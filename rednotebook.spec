@@ -10,6 +10,7 @@ BuildArch:      noarch
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(pip)
 BuildRequires:	desktop-file-utils
 
 Requires:	python3dist(pyyaml)
