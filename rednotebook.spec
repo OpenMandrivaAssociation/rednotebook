@@ -1,5 +1,5 @@
 Name:           rednotebook
-Version:        2.28.1
+Version:        2.29
 Release:        1
 Summary:        A desktop diary
 Group:          Office
