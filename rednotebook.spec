@@ -7,6 +7,7 @@ License:        GPLv2+
 URL:            http://rednotebook.sourceforge.net
 Source0:        https://github.com/jendrikseipp/rednotebook/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
+BuildRequires:	gettext
 BuildRequires:	pkgconfig(python)
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	python3dist(setuptools)
