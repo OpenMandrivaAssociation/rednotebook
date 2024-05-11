@@ -1,10 +1,10 @@
 Name:           rednotebook
-Version:        2.32
+Version:        2.33
 Release:        1
 Summary:        A desktop diary
 Group:          Office
 License:        GPLv2+
-URL:            http://rednotebook.sourceforge.net
+URL:            https://rednotebook.sourceforge.net
 Source0:        https://github.com/jendrikseipp/rednotebook/archive/v%{version}/%{name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:	gettext
