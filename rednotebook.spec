@@ -1,6 +1,6 @@
 %define _empty_manifest_terminate_build 0
 Name:           rednotebook
-Version:        2.37
+Version:        2.38
 Release:        1
 Summary:        A desktop diary
 Group:          Office
