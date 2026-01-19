@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 Name:           rednotebook
-Version:        2.41
-Release:        2
+Version:        2.42
+Release:        1
 Summary:        A desktop diary
 Group:          Office
 License:        GPLv2+
